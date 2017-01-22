@@ -1,0 +1,15 @@
+Exporter version: 5.2.0, Blender version: 2.76 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  /home/shoghicp/GameTest/assets/
+========= An error was encountered =========
+  File "/home/shoghicp/.config/blender/2.76/scripts/addons/babylon-js/json_exporter.py", line 49, in execute
+    self.world = World(scene)
+  File "/home/shoghicp/.config/blender/2.76/scripts/addons/babylon-js/world.py", line 20, in __init__
+    self.ambient_color = mathutils.Color((0.2, 0.2, 0.3))
+ERROR:  name 'mathutils' is not defined
+========= end of processing =========
+elapsed time:  0 min, 0.0007 secs

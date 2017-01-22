@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <title>c SURF</title>
+    <script src="js/babylon.custom.js"></script>
+    <script src="js/babylon.obj.min.js"></script>
+    <script src="js/base.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="myHue"><div id="currentHueBar"></div><div id="enemyHueBar"></div></div>
+    <div id="otherHue"><img id="hitHueBar" src="/assets/shieldIcon.png" /><img id="damageHueBar" src="/assets/waveIcon.png" /></div>
+    <div id="enemyName"></div>
+    <div id="enemyHealth"><div id="enemyHealthNumber"></div></div>
+    <div id="waveInfo"><div id="currentCBar"></div></div>
+    <div id="window"><div id="windowTitle"><i>c</i> SURF</div><p id="windowMessage">In this universe, you travel at ~25% of the speed of light.</br>Due to relativity and the absolute speed of light, any wave shot at these speeds will get shifted to red or blue. Your mission is to destroy the enemy ships by attacking their shields that are weak on certain wavelengths, taking into account the shift.</br></br>Controls: <ul><li>W: Accelerate</li><li>S: Decelerate</li><li>Space: Shoot laser</li></br>Press any key to start!</ul></p></div>
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+		var canvas = document.getElementById('renderCanvas');
+        createGame(canvas);
+    });
+	</script>
+</body>
+</html>

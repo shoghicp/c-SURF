@@ -1,0 +1,15 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl Grey.001
+Ns 94.117647
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 9
+map_Bump /home/shoghicp/GameTest/assets/shipNormal.png
+map_Kd /home/shoghicp/GameTest/assets/shipDiffAlbedoMap.png
+map_d /home/shoghicp/GameTest/assets/shipDiffAlbedoMap.png
