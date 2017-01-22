@@ -105,10 +105,10 @@ var enemyEntries = [
 ];
 
 function loadAssets(callback) {
-    var music = new BABYLON.Sound("Music", "/assets/sound/all.mp3", scene, null, { loop: true, autoplay: true });
+    var music = new BABYLON.Sound("Music", "assets/sound/all.mp3", scene, null, { loop: true, autoplay: true });
     music.setVolume(0.4);
 
-    BABYLON.SceneLoader.ImportMesh("", "/assets/newship/", "turbo.obj", scene, function (meshes) {
+    BABYLON.SceneLoader.ImportMesh("", "assets/newship/", "turbo.obj", scene, function (meshes) {
 
         var turbo = BABYLON.Mesh.MergeMeshes(meshes);
         /*
@@ -130,7 +130,7 @@ function loadAssets(callback) {
         turbo.rotation.y = Math.PI/2;
         objects["Turbo"] = turbo.clone("Turbo", turbo.parent);
 
-        BABYLON.SceneLoader.ImportMesh("", "/assets/newship/", "Ship2.obj", scene, function (meshes) {
+        BABYLON.SceneLoader.ImportMesh("", "assets/newship/", "Ship2.obj", scene, function (meshes) {
 
             var ship = BABYLON.Mesh.MergeMeshes(meshes);
             /*
@@ -144,8 +144,8 @@ function loadAssets(callback) {
              lightmapTexture: BaseTexture;
              */
             ship.material = new BABYLON.StandardMaterial("texture1", scene);
-            ship.material.diffuseTexture = new BABYLON.Texture("/assets/newship/ShipDiffColorRed.png", scene);
-            ship.material.ambientTexture = new BABYLON.Texture("/assets/newship/ShipAmbOcc.jpg", scene);
+            ship.material.diffuseTexture = new BABYLON.Texture("assets/newship/ShipDiffColorRed.png", scene);
+            ship.material.ambientTexture = new BABYLON.Texture("assets/newship/ShipAmbOcc.jpg", scene);
             ship.speed = new BABYLON.Vector3(0, 0, 0);
             ship.position = new BABYLON.Vector3(0, 0, -100000);
             ship.scaling.x = 20;
@@ -158,8 +158,8 @@ function loadAssets(callback) {
             ship.scaling.y = 10;
             ship.scaling.z = 10;
             ship.material = new BABYLON.StandardMaterial("texture1", scene);
-            ship.material.diffuseTexture = new BABYLON.Texture("/assets/newship/ShipDiffColorBlue.png", scene);
-            ship.material.ambientTexture = new BABYLON.Texture("/assets/newship/ShipAmbOcc.jpg", scene);
+            ship.material.diffuseTexture = new BABYLON.Texture("assets/newship/ShipDiffColorBlue.png", scene);
+            ship.material.ambientTexture = new BABYLON.Texture("assets/newship/ShipAmbOcc.jpg", scene);
             objects["SmallShip"] = ship.clone("SmallShip", ship.parent);
 
             callback();
@@ -303,7 +303,7 @@ function createMyShip(health){
     myObjects[myShipName + "_turbo"] = turbo;
 
     var particleSystem = new BABYLON.ParticleSystem("particles_" + myShipName, 2000, scene);
-    particleSystem.particleTexture = new BABYLON.Texture("/assets/flare.png", scene);
+    particleSystem.particleTexture = new BABYLON.Texture("assets/flare.png", scene);
     particleSystem.textureMask = new BABYLON.Color4(0.1, 0.8, 0.8, 1.0);
     particleSystem.emitter = ship;
     particleSystem.minEmitBox = new BABYLON.Vector3(0.05, 0.04, -0.23); // Starting all From
@@ -323,7 +323,7 @@ function createMyShip(health){
 
 
     var particleSystem2 = new BABYLON.ParticleSystem("particles2_" + myShipName, 2000, scene);
-    particleSystem2.particleTexture = new BABYLON.Texture("/assets/flare.png", scene);
+    particleSystem2.particleTexture = new BABYLON.Texture("assets/flare.png", scene);
     particleSystem2.textureMask = new BABYLON.Color4(0.1, 0.8, 0.8, 1.0);
     particleSystem2.emitter = ship;
     particleSystem2.minEmitBox = new BABYLON.Vector3(0.05, 0.04, 0.23); // Starting all From
@@ -358,7 +358,7 @@ function createEnemyShip(name, health, distance, wavelength, ai){
     myObjects[name] = ship;
 
     var particleSystem = new BABYLON.ParticleSystem("particles_" + name, 8000, scene);
-    particleSystem.particleTexture = new BABYLON.Texture("/assets/flare.png", scene);
+    particleSystem.particleTexture = new BABYLON.Texture("assets/flare.png", scene);
     particleSystem.textureMask = new BABYLON.Color4(0.1, 0.8, 0.8, 1.0);
     particleSystem.emitter = ship;
     particleSystem.minEmitBox = new BABYLON.Vector3(0.1, 0.03, -0.03); // Starting all From
@@ -376,7 +376,7 @@ function createEnemyShip(name, health, distance, wavelength, ai){
     particleSystem.start();
     
     var explosions = new BABYLON.ParticleSystem("particles_" + name, 4000, scene);
-    explosions.particleTexture = new BABYLON.Texture("/assets/flare.png", scene);
+    explosions.particleTexture = new BABYLON.Texture("assets/flare.png", scene);
     explosions.textureMask = new BABYLON.Color4(1, 1, 1, 1.0);
     explosions.emitter = ship;
     explosions.minEmitBox = new BABYLON.Vector3(0.1, 0.05, 0); // Starting all From

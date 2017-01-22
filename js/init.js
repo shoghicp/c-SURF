@@ -101,7 +101,7 @@ function runGame() {
 function createStars(){
 
     var starSystem = new BABYLON.ParticleSystem("stars", 30000, scene);
-    starSystem.particleTexture = new BABYLON.Texture("/assets/flare.png", scene);
+    starSystem.particleTexture = new BABYLON.Texture("assets/flare.png", scene);
     starSystem.textureMask = new BABYLON.Color4(1, 1, 1, 1.0);
     starSystem.emitter = getShip(myShipName);
     starSystem.minEmitBox = new BABYLON.Vector3(-80, -80, -80); // Starting all From

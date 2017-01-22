@@ -10,6 +10,6 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 0.000000
 illum 9
-map_Bump /home/shoghicp/GameTest/assets/shipNormal.png
-map_Kd /home/shoghicp/GameTest/assets/shipDiffAlbedoMap.png
-map_d /home/shoghicp/GameTest/assets/shipDiffAlbedoMap.png
+map_Bump /home/shoghicp/GameTestassets/shipNormal.png
+map_Kd /home/shoghicp/GameTestassets/shipDiffAlbedoMap.png
+map_d /home/shoghicp/GameTestassets/shipDiffAlbedoMap.png

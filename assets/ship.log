@@ -4,7 +4,7 @@ Exporter version: 5.2.0, Blender version: 2.76 (sub 0)
 		selected layers only:  false
 		flat shading entire scene:  false
 		inline textures:  false
-		texture directory:  /home/shoghicp/GameTest/assets/
+		texture directory:  /home/shoghicp/GameTestassets/
 ========= An error was encountered =========
   File "/home/shoghicp/.config/blender/2.76/scripts/addons/babylon-js/json_exporter.py", line 49, in execute
     self.world = World(scene)
